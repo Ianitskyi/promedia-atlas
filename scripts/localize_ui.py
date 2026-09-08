@@ -3,7 +3,7 @@ from pathlib import Path
 def replace(path, pairs):
     text=Path(path).read_text(encoding='utf-8')
     for old,new in pairs:
-        if old not in text: print('missing:', old[:60])
+        if old not in text: continue
         text=text.replace(old,new)
     Path(path).write_text(text,encoding='utf-8')
 
@@ -28,6 +28,7 @@ replace('app/atlas.tsx',[
 ])
 
 replace('app/media/[id]/profile.tsx',[
+("</div></>}\n <div className=\"profile-grid\">","</div></>}{!profile.community&&<p className=\"profile-description-missing\">{tr('Перевірений опис із відкритого джерела ще не додано. Знаєте офіційний сайт або надійне джерело? Напишіть на info@promedia.report.','A verified description from an open source has not been added yet. Know the official website or a reliable source? Email info@promedia.report.')}</p>}\n <div className=\"profile-grid\">"),
 ('<a href="/">Повернутися до каталогу</a>',"<a href={en?'/en':'/'}>{tr('Повернутися до каталогу','Return to the directory')}</a>"),
 ('>Завантажуємо сторінку медіа…</p>',">{tr('Завантажуємо сторінку медіа…','Loading media page…')}</p>"),
 ('{profile.media.length} реєстрацій',"{profile.media.length} {tr('реєстрацій','registrations')}"),
