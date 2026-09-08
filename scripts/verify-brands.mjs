@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {groupMedia} from './build-brands.mjs';
+const fixture=(id,name,entity)=>({id,names:name?[name]:[],entities:[entity]});
+const groups=groupMedia([fixture('1','Голос','a'),fixture('2','«ГОЛОС»','a'),fixture('3','Голос','b'),fixture('4','Інший бренд','a'),fixture('5','','a'),fixture('6','','a')],{groups:[]});
+assert.equal(groups.length,5,'Homonyms, different brands and unnamed registrations must not merge');
+assert.ok(groups.some(g=>g.map(m=>m.id).join(',')==='1,2'));
+const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+const index=read('public/data/brand-index.json'),directory=read('public/data/media-directory.json');
+assert.equal(Object.keys(index).length,7230);
+assert.equal(new Set(directory.flatMap(b=>b.registryIds)).size,7230);
+assert.equal(directory.reduce((a,b)=>a+b.registryIds.length,0),7230);
+assert.equal(index['R40-06743'].id,index['L11-01850'].id);
+assert.equal(index['R11-02145'].id,index['L11-00052'].id);
+assert.equal(index['R40-02280'].id,index['R20-02383'].id);
+assert.notEqual(index['R40-02280'].id,index['R30-06402'].id,'Unrelated Ukrainian Pravda print title must remain separate');
+const bucketCache={};for(const b of directory){const key=b.id.slice(6,7),bucket=bucketCache[key]??=read('public/data/brand-buckets/'+key+'.json'),p=bucket[b.id];assert.equal(p.id,b.id);assert.deepEqual(p.registryIds,b.registryIds);assert.ok(b.newsIds.includes(b.id));for(const id of b.registryIds)assert.equal(index[id].id,b.id)}
+const communityIds=directory.flatMap(b=>b.newsIds.filter(id=>!id.startsWith('atlas-')));
+assert.equal(communityIds.length,new Set(communityIds).size,'Community tag cannot map to competing brand pages');
+assert.ok(Object.keys(bucketCache).length<=20,'Bucket count should stay bounded');
+console.log(`Verified ${directory.length} brand pages in ${Object.keys(bucketCache).length} buckets: complete coverage, shared URLs, homonym isolation, retained source records, unique community links.`);
