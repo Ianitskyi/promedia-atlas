@@ -1,2 +1,2 @@
 import Atlas from './atlas';
-export default function Home() { return <Atlas/>; }
+export default function Home() { return <Atlas locale="uk"/>; }
