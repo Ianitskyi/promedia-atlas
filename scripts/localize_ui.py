@@ -8,6 +8,7 @@ def replace(path, pairs):
     Path(path).write_text(text,encoding='utf-8')
 
 replace('app/atlas.tsx',[
+("<h3>Записи джерела ({active.details.length})</h3>","<h3>{tr('Контактні дані з реєстру','Contact details from the registry')}</h3><ContactList items={active.contacts||[]} en={en}/><h3>{tr('Записи джерела','Source records')} ({active.details.length})</h3>"),
 ("region?regionName(region):'Географія реєстрації'","region?regionName(region):tr('Географія реєстрації','Registration geography')"),
 ("'Натисніть область'","tr('Натисніть область','Select a region')"),
 ('<span>Менше <i/> Більше медіа</span>',"<span>{tr('Менше','Fewer')} <i/> {tr('Більше медіа','More media')}</span>"),
@@ -28,6 +29,7 @@ replace('app/atlas.tsx',[
 ])
 
 replace('app/media/[id]/profile.tsx',[
+("<p>{m.technologies.join('; ')||'Не зазначено'}</p>{m.details.map","<p>{m.technologies.join('; ')||tr('Не зазначено','Not specified')}</p><h3>{tr('Контактні дані з реєстру','Contact details from the registry')}</h3><Contacts items={m.contacts||[]} en={en}/>{m.details.map"),
 ("</div></>}\n <div className=\"profile-grid\">","</div></>}{!profile.community&&<p className=\"profile-description-missing\">{tr('Перевірений опис із відкритого джерела ще не додано. Знаєте офіційний сайт або надійне джерело? Напишіть на info@promedia.report.','A verified description from an open source has not been added yet. Know the official website or a reliable source? Email info@promedia.report.')}</p>}\n <div className=\"profile-grid\">"),
 ('<a href="/">Повернутися до каталогу</a>',"<a href={en?'/en':'/'}>{tr('Повернутися до каталогу','Return to the directory')}</a>"),
 ('>Завантажуємо сторінку медіа…</p>',">{tr('Завантажуємо сторінку медіа…','Loading media page…')}</p>"),

@@ -3,7 +3,7 @@ from collections import defaultdict
 from pathlib import Path
 import openpyxl
 
-source=Path(r'C:\Users\User\Downloads\dodatok_perelik-subyektiv-u-sferi-media-stanom-na-01.08.2026.xlsx')
+source=Path('data/registry-source-2026-08-01.xlsx')
 book=openpyxl.load_workbook(source,read_only=True,data_only=True)
 main,foreign=(book[s] for s in book.sheetnames)
 emails=defaultdict(set); phones=defaultdict(set); addresses=defaultdict(set)
