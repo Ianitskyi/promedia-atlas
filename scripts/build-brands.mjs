@@ -40,7 +40,7 @@ export function build(){
   const newsIds=[id,...linked.map(c=>c.id)];
   const profile={id,name,registryIds:ids,newsIds,community:linked[0]||null,grouping:explicit?.reason||'Однакова повна назва та спільний реєстрант. Регістр літер, лапки й зайві пробіли нормалізовано.',media:members,entities:Object.fromEntries(entityIds.map(e=>[e,d.entities[e]])),regions:d.regions,date:d.date};
   profiles.push(profile);members.forEach(m=>index[m.id]={id,name,count:members.length});
-  directory.push({id,name,city:cities.join('; '),registryIds:ids,newsIds,url:'https://promedia-atlas.ianitskyi.chatgpt.site/media/'+id,status:'approved'});
+  directory.push({id,name,city:cities.join('; '),registryIds:ids,newsIds,url:'https://atlas.promedia.report/media/'+id,status:'approved'});
  }
  const out=path.join(root,'public/data/brand-buckets');fs.mkdirSync(out,{recursive:true});
  // A small stable bucket keeps requests focused without creating thousands of deployment files.
