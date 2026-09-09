@@ -20,11 +20,11 @@ replace('app/atlas.tsx',[
 ('>Далі →</Button>',">{tr('Далі →','Next →')}</Button>"),
 ('<h2>Що показує вибірка</h2>',"<h2>{tr('Що показує вибірка','What the selection shows')}</h2>"),
 ('<h3>Види діяльності</h3>',"<h3>{tr('Види діяльності','Activity types')}</h3>"),
-('<h3>Найбільші портфелі реєстрантів</h3>',"<h3>{tr('Найбільші портфелі реєстрантів','Largest registrant portfolios')}</h3>"),
+('<h3>Найбільші портфелі осіб або компаній, на які оформлено медіа</h3>',"<h3>{tr('Найбільші портфелі осіб або компаній, на які оформлено медіа','Largest portfolios by person or company the media outlets are registered to')}</h3>"),
 ('<h3>Регіони</h3>',"<h3>{tr('Регіони','Regions')}</h3>"),
 ('<footer>Атлас Меда · Проєкт ПроМедіа <span>Дані: 01.08.2026 · Довідка перевірена: 07.09.2026</span></footer>',"<footer>{tr('Атлас Меда · Проєкт ПроМедіа','Media Atlas · A ProMedia project')} <span>{tr('Дані: 01.08.2026 · Довідка перевірена: 07.09.2026','Data: 1 Aug 2026 · Guidance checked: 7 Sep 2026')}</span></footer>"),
 ('>Відкрити сторінку бренду · ',">{tr('Відкрити сторінку бренду · ','Open brand page · ')}"),
-('>Усі медіа реєстранта</Button>',">{tr('Усі медіа реєстранта','All media by this registrant')}</Button>"),
+('>Усі медіа цієї особи або компанії</Button>',">{tr('Усі медіа цієї особи або компанії','All media registered to this person or company')}</Button>"),
 ('>Перевірити в реєстрі Нацради ↗</a>',">{tr('Перевірити в реєстрі Нацради ↗','Check the National Council registry ↗')}</a>"),
 ])
 

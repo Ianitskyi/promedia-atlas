@@ -38,7 +38,7 @@ export function build(){
   const linked=[...new Map([...explicitLinks,...automaticLinks].map(c=>[c.id,c])).values()];
   if(!explicit&&linked.length===1)name=linked[0].name;
   const newsIds=[id,...linked.map(c=>c.id)];
-  const profile={id,name,registryIds:ids,newsIds,community:linked[0]||null,grouping:explicit?.reason||'Однакова повна назва та спільний реєстрант. Регістр літер, лапки й зайві пробіли нормалізовано.',media:members,entities:Object.fromEntries(entityIds.map(e=>[e,d.entities[e]])),regions:d.regions,date:d.date};
+  const profile={id,name,registryIds:ids,newsIds,community:linked[0]||null,grouping:explicit?.reason||'Однакова повна назва та спільна особа або компанія, на яку оформлено медіа. Регістр літер, лапки й зайві пробіли нормалізовано.',media:members,entities:Object.fromEntries(entityIds.map(e=>[e,d.entities[e]])),regions:d.regions,date:d.date};
   profiles.push(profile);members.forEach(m=>index[m.id]={id,name,count:members.length});
   directory.push({id,name,city:cities.join('; '),registryIds:ids,newsIds,url:'https://atlas.promedia.report/media/'+id,status:'approved'});
  }
