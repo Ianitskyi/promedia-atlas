@@ -13,7 +13,6 @@ export default function UtilityNav({locale,view,onView,profile=false,mediaId,pat
    <button className={'nav-link '+(view==='guide'?'active':'')} onClick={()=>onView?.('guide')}>{en?'How to register media':'Як зареєструвати медіа'}</button>
   </>}
   <a className="nav-link" href={'https://news.promedia.report/'+(en?'?lang=en':'')}>{en?'News':'Новини'}</a>
-  <a className="error-mail" href="mailto:info@promedia.report">{en?'Report an error':'Повідомити про помилку'} · info@promedia.report</a>
   <div className="lang-toggle" role="group" aria-label="Language / Мова">
    <a className={'lang-btn '+(!en?'active':'')} href={ukPath}>UA</a><a className={'lang-btn '+(en?'active':'')} href={enPath}>EN</a>
   </div>
