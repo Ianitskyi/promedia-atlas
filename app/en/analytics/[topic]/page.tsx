@@ -1,1 +1,1 @@
-import {AnalyticsTopic} from '../../../analytics/analytics-sections'; export default async function Page({params}:{params:Promise<{topic:string}>}){const {topic}=await params;return <AnalyticsTopic locale="en" topic={topic}/>}
+import {AnalyticsTopic} from '../../../analytics/analytics-content'; export default async function Page({params}:{params:Promise<{topic:string}>}){const {topic}=await params;return <AnalyticsTopic locale="en" topic={topic}/>}

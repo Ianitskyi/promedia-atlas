@@ -1,1 +1,1 @@
-import {AnalyticsIndex} from './analytics-sections'; export default function Page(){return <AnalyticsIndex locale="uk"/>}
+import {AnalyticsIndex} from './analytics-content'; export default function Page(){return <AnalyticsIndex locale="uk"/>}
