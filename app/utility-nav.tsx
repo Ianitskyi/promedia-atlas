@@ -18,7 +18,6 @@ export default function UtilityNav({locale,view,onView,profile=false,mediaId,pat
   </div>
   </nav>
   <nav className="network-nav" aria-label={en ? 'ProMedia projects' : 'Проєкти ПроМедіа'}>
-   <a className="network-link" href={'https://news.promedia.report/'+(en?'?lang=en':'')}>{en?'News':'Новини'}</a>
    <a className="network-link" href={'https://communities.promedia.report/'+(en?'en/':'')}>{en?'Community Map':'Карта спільнот'}</a>
    <a className="network-link" href={'https://ratings.promedia.report/'+(en?'?lang=en':'')}>{en?'Journalism Schools Ranking':'Рейтинг журфаків'}</a>
    <a className="network-link" href={'https://research.promedia.report/'+(en?'en/':'')}>{en?'Research':'Дослідження'}</a>
