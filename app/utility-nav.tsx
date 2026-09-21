@@ -18,11 +18,14 @@ export default function UtilityNav({locale,view,onView,profile=false,mediaId,pat
   </div>
   </nav>
   <nav className="network-nav" aria-label={en ? 'ProMedia projects' : 'Проєкти ПроМедіа'}>
-   <a className="network-link" href={'https://news.promedia.report/'+(en?'?lang=en':'')}>{en?'News':'Новини'}</a>
-   <a className="network-link" href={'https://communities.promedia.report/'+(en?'en/':'')}>{en?'Community Map':'Карта спільнот'}</a>
-   <a className="network-link" href={'https://ratings.promedia.report/'+(en?'?lang=en':'')}>{en?'Journalism Schools Ranking':'Рейтинг журфаків'}</a>
-   <a className="network-link" href={'https://research.promedia.report/'+(en?'en/':'')}>{en?'Research':'Дослідження'}</a>
-   <a className="network-link active" href={en?'/en/':'/'}>{en?'Media Atlas':'Атлас Медіа'}</a>
+   <span className="network-nav__label">{en ? 'ProMedia projects' : 'Проєкти ПроМедіа'}</span>
+   <div className="network-nav__links">
+    <a className="network-link" href={'https://news.promedia.report/'+(en?'?lang=en':'')}>{en?'News':'Новини'}</a>
+    <a className="network-link" href={'https://communities.promedia.report/'+(en?'en/':'')}>{en?'Community Map':'Карта спільнот'}</a>
+    <a className="network-link" href={'https://ratings.promedia.report/'+(en?'?lang=en':'')}>{en?'Journalism Schools Ranking':'Рейтинг журфаків'}</a>
+    <a className="network-link" href={'https://research.promedia.report/'+(en?'en/':'')}>{en?'Research':'Дослідження'}</a>
+    <a className="network-link active" href={en?'/en/':'/'}>{en?'Media Atlas':'Атлас Медіа'}</a>
+   </div>
   </nav>
  </>
 }
