@@ -7,7 +7,7 @@ export default function NetworkFooter({ locale, children }: { locale: 'uk' | 'en
     <nav className="network-footer" aria-label={en ? 'ProMedia projects' : 'Проєкти ПроМедіа'}>
       <a href={'https://news.promedia.report/' + (en ? '?lang=en' : '')}>{en ? 'News' : 'Новини'}</a>
       <a href={'https://communities.promedia.report/' + (en ? 'en/' : '')}>{en ? 'Community Map' : 'Карта спільнот'}</a>
-      <a href={'https://ratings.promedia.report/' + (en ? '?lang=en' : '')}>{en ? 'Journalism Schools Ranking' : 'Рейтинг журфаків'}</a>
+      <a href={en ? 'https://ratings.promedia.report/en/' : 'https://ratings.promedia.report/'}>{en ? 'Journalism Schools Ranking' : 'Рейтинг журфаків'}</a>
       <a href={'https://research.promedia.report/' + (en ? 'en/' : '')}>{en ? 'Research' : 'Дослідження'}</a>
       <a href={en ? '/en/' : '/'}>{en ? 'Media Atlas' : 'Атлас Медіа'}</a>
     </nav>
