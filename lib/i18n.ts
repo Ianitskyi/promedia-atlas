@@ -248,12 +248,12 @@ export function makeTr(locale: Locale) {
 }
 
 // Адреси сусідніх сайтів мережі ПроМедіа; сайти без crh-версії
-// (promedia.report, рейтинг журфаків) отримують українську адресу.
+// (promedia.report) отримують українську адресу.
 export const NETWORK_URLS: Record<'home' | 'news' | 'communities' | 'ratings' | 'research', Record<Locale, string>> = {
   home: { uk: 'https://promedia.report', en: 'https://promedia.report/en', crh: 'https://promedia.report' },
   news: { uk: 'https://news.promedia.report/', en: 'https://news.promedia.report/?lang=en', crh: 'https://news.promedia.report/?lang=crh' },
   communities: { uk: 'https://communities.promedia.report/', en: 'https://communities.promedia.report/en/', crh: 'https://communities.promedia.report/crh/' },
-  ratings: { uk: 'https://ratings.promedia.report/', en: 'https://ratings.promedia.report/en/', crh: 'https://ratings.promedia.report/' },
+  ratings: { uk: 'https://ratings.promedia.report/', en: 'https://ratings.promedia.report/en/', crh: 'https://ratings.promedia.report/crh/' },
   research: { uk: 'https://research.promedia.report/', en: 'https://research.promedia.report/en/', crh: 'https://research.promedia.report/crh/' },
 };
 
