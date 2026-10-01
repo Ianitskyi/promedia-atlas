@@ -174,6 +174,75 @@ export const CRH: Record<string, string> = {
   'Matching phones': 'Telefon tesadüfleri',
   'Matching addresses': 'Adres tesadüfleri',
 
+  // Методологія, панель реєстраційних даних, сторінка бренду
+  'Ukraine’s borders include the temporarily occupied territories. No records does not mean no media. Foreign media are available in the directory but are not marked on this map.':
+    'Ukrainanıñ sıñırlarına muvaqqat işğal etilgen topraqlar da kire. Qaydlarnıñ olmaması mediyanıñ olmamasını bildirmey. Ecnebiy mediyalar katalogda bar, amma bu haritada işaretlenmey.',
+  'Totals change with the filters. The number of registrations does not measure audience or influence.':
+    'Neticeler süzgüçlernen beraber deñişe. Qaydlar sayısı auditoriyanı ya da tesirni ölçemey.',
+  'Several media outlets registered to the same person or company do not always form a media group. This file does not describe ownership or beneficial owners.':
+    'Bir qaç mediyanıñ bir şahıs ya da şirketke qayd etilmesi her vaqıt mediya gruppası demek degil. Bu fayl mülkiyetni ve benefitsiarlarnı tarif etmey.',
+  'How to read this data · methodology and limitations':
+    'Bu malümatnı nasıl oqumalı · metodologiya ve sıñırlar',
+  'Source: two Excel sheets from the National Council as of 1 August 2026. 10,265 main rows were grouped into 7,188 identifiers, and 42 foreign linear media were added. Repeated records are kept in the cards. The list also includes providers and service suppliers.':
+    'Menba — Milliy Şuranıñ 01.08.2026 vaziyetine köre eki Excel cedveli. 10 265 esas satır 7 188 identifikator boyunca birleştirildi; 42 ecnebiy sızıqlı mediya qoşuldı. Tekrarlanğan qaydlar kartoçkalarda saqlandı. Cedvelge provayderler ve hızmet berüvciler de kire.',
+  '* People or companies the media outlets are registered to were grouped by code or, where it is missing, by the exact normalized name. This is the atlas’s own calculation and may differ from the official number of entities. For foreign media, the name of the foreign organization is used rather than its representative. A portfolio does not confirm common ownership.':
+    '* Mediya qayd etilgen şahıslar ya da şirketler kod boyunca, kod olmasa — anıq normallaştırılğan ad boyunca birleştirildi. Bu atlasnıñ öz esabı, o subyektlerniñ resmiy sayısından farqlı olabilir. Ecnebiy mediyalar içün vekilniñ degil, ecnebiy teşkilâtnıñ adı qullanıldı. Portfel umumiy mülkiyetni tasdiqlamay.',
+  'An empty region for the city of Kyiv was normalized as Kyiv City. The map shows regions, not newsroom coordinates or signal coverage. Personal tax numbers of individuals and contact emails are not included in the public dataset. Each card shows the row number in the source sheet for verification.':
+    'Kiev şeeri içün boş vilâyet Kiev şeeri olaraq normallaştırıldı. Harita redaktsiyalarnıñ koordinatlarını ya da sinyal qaplavını degil, vilâyetlerni köstere. Ferdiy şahıslarnıñ vergi nomeraları ve kontakt email-ler açıq malümat toplumına kirsetilmedi. Kartoçkada teşkermek içün menba cedveliniñ satır nomerası kösterile.',
+  'Registration does not confirm that a media outlet actually operates or its quality. Online media register voluntarily, so this directory does not cover the whole media market. Category or region shares may overlap when one identifier has several matching records.':
+    'Qayd mediyanıñ aqiqiy çalışqanını ya da keyfiyetini tasdiqlamay. Onlayn mediyalar ihtiyariy qayd etile, bu sebepten bu katalog bütün mediya bazarını qaplamay. Bir identifikatornıñ bir qaç uyğun qaydı olsa, kategoriya ya da vilâyet payları üst-üste kelip olur.',
+  'Open the source on the National Council website ↗':
+    'Menbanı Milliy Şuranıñ saytında açmaq ↗',
+  'registrations →':
+    'qayd →',
+  'Foreign linear media':
+    'Ecnebiy sızıqlı mediyalar',
+  'Main registry':
+    'Esas reyestr',
+  'Grouped by name: the code is missing or not used for this sheet.':
+    'Ad boyunca birleştirüv: kod yoq ya da bu cedvel içün qullanılmay.',
+  'Foreign media — outside the map of Ukraine':
+    'Ecnebiy mediya — Ukraina haritasından tışta',
+  'Row':
+    'Satır',
+  'Region':
+    'Vilâyet',
+  'Channel':
+    'Kanal',
+  'Frequency':
+    'Çastota',
+  'Distribution / service area':
+    'Yayılma / hızmet saası',
+  'Area':
+    'Saa',
+  'Note':
+    'Qayd',
+  'Map of Ukraine’s regions':
+    'Ukraina vilâyetleriniñ haritası',
+  'media':
+    'mediya',
+  'Foreign media outlet':
+    'Ecnebiy mediya',
+  'Registration data ':
+    'Qayd malümatı ',
+  'EDRPOU: ':
+    'EDRPOU: ',
+  'Some news is temporarily unavailable.':
+    'Haberlerniñ bir qısmı muvaqqat erişilmez.',
+  'Could not load the news.':
+    'Haberlerni yüklemek mümkün olmadı.',
+  'This page does not exist.':
+    'Böyle saife yoq.',
+  'Could not load the page.':
+    'Saifeni yüklemek mümkün olmadı.',
+  'A shared owner does not by itself merge different brands. Similar names of media registered to different people or companies stay separate until verified. This page is based on registry data and does not confirm actual operation or ownership structure.':
+    'Umumiy saip özü türlü brendlerni birleştirmey. Türlü şahıslar ya da şirketlerge qayd etilgen mediyalarnıñ beñzer adları teşkerüvge qadar ayrı qala. Bu saife reyestr malümatına esaslana, aqiqiy faaliyetni ya da mülkiyet strukturasını tasdiqlamay.',
+  'Check the original source ↗':
+    'Asıl menbanı teşkermek ↗',
+
+  'Same full name and the same person or company the media outlet is registered to. Letter case, quotes and extra spaces were normalized.':
+    'Ayn tolu ad ve mediya qayd etilgen ayn şahıs ya da şirket. Arif registri, tırnaqlar ve artıq boşluqlar normallaştırıldı.',
+
   // Розділи аналітики
   'Geography': 'Coğrafiya',
   'Distribution by region and foreign media.': 'Qaydlarnıñ vilâyetler boyunca bölünüvi ve ayrıca ecnebiy mediyalar.',
@@ -248,12 +317,12 @@ export function makeTr(locale: Locale) {
 }
 
 // Адреси сусідніх сайтів мережі ПроМедіа; сайти без crh-версії
-// (promedia.report, рейтинг журфаків) отримують українську адресу.
+// (promedia.report) отримують українську адресу.
 export const NETWORK_URLS: Record<'home' | 'news' | 'communities' | 'ratings' | 'research', Record<Locale, string>> = {
   home: { uk: 'https://promedia.report', en: 'https://promedia.report/en', crh: 'https://promedia.report' },
   news: { uk: 'https://news.promedia.report/', en: 'https://news.promedia.report/?lang=en', crh: 'https://news.promedia.report/?lang=crh' },
   communities: { uk: 'https://communities.promedia.report/', en: 'https://communities.promedia.report/en/', crh: 'https://communities.promedia.report/crh/' },
-  ratings: { uk: 'https://ratings.promedia.report/', en: 'https://ratings.promedia.report/en/', crh: 'https://ratings.promedia.report/' },
+  ratings: { uk: 'https://ratings.promedia.report/', en: 'https://ratings.promedia.report/en/', crh: 'https://ratings.promedia.report/crh/' },
   research: { uk: 'https://research.promedia.report/', en: 'https://research.promedia.report/en/', crh: 'https://research.promedia.report/crh/' },
 };
 
