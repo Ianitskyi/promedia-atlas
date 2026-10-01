@@ -1,15 +1,16 @@
 import type { ReactNode } from 'react';
+import { makeTr, NETWORK_URLS, prefix, type Locale } from '@/lib/i18n';
 
-export default function NetworkFooter({ locale, children }: { locale: 'uk' | 'en'; children?: ReactNode }) {
-  const en = locale === 'en';
+export default function NetworkFooter({ locale, children }: { locale: Locale; children?: ReactNode }) {
+  const tr = makeTr(locale);
   return <footer className="atlas-footer">
     {children && <div className="atlas-footer__details">{children}</div>}
-    <nav className="network-footer" aria-label={en ? 'ProMedia projects' : 'Проєкти ПроМедіа'}>
-      <a href={'https://news.promedia.report/' + (en ? '?lang=en' : '')}>{en ? 'News' : 'Новини'}</a>
-      <a href={'https://communities.promedia.report/' + (en ? 'en/' : '')}>{en ? 'Community Map' : 'Карта спільнот'}</a>
-      <a href={en ? 'https://ratings.promedia.report/en/' : 'https://ratings.promedia.report/'}>{en ? 'Journalism Schools Ranking' : 'Рейтинг журфаків'}</a>
-      <a href={'https://research.promedia.report/' + (en ? 'en/' : '')}>{en ? 'Research' : 'Дослідження'}</a>
-      <a href={en ? '/en/' : '/'}>{en ? 'Media Atlas' : 'Атлас Медіа'}</a>
+    <nav className="network-footer" aria-label={tr('Проєкти ПроМедіа', 'ProMedia projects')}>
+      <a href={NETWORK_URLS.news[locale]}>{tr('Новини', 'News')}</a>
+      <a href={NETWORK_URLS.communities[locale]}>{tr('Карта спільнот', 'Community Map')}</a>
+      <a href={NETWORK_URLS.ratings[locale]}>{tr('Рейтинг журфаків', 'Journalism Schools Ranking')}</a>
+      <a href={NETWORK_URLS.research[locale]}>{tr('Дослідження', 'Research')}</a>
+      <a href={prefix(locale) + '/'}>{tr('Атлас Медіа', 'Media Atlas')}</a>
     </nav>
   </footer>;
 }

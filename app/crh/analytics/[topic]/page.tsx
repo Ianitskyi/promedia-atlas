@@ -1,0 +1,1 @@
+import {AnalyticsTopic} from '../../../analytics/analytics-content'; export default async function Page({params}:{params:Promise<{topic:string}>}){const {topic}=await params;return <AnalyticsTopic locale="crh" topic={topic}/>}
