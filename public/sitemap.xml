@@ -5,22 +5,39 @@
     <loc>https://atlas.promedia.report/</loc>
     <xhtml:link rel="alternate" hreflang="uk" href="https://atlas.promedia.report/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://atlas.promedia.report/en/" />
+    <xhtml:link rel="alternate" hreflang="crh" href="https://atlas.promedia.report/crh/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://atlas.promedia.report/" />
   </url>
   <url>
     <loc>https://atlas.promedia.report/en/</loc>
     <xhtml:link rel="alternate" hreflang="uk" href="https://atlas.promedia.report/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://atlas.promedia.report/en/" />
+    <xhtml:link rel="alternate" hreflang="crh" href="https://atlas.promedia.report/crh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://atlas.promedia.report/" />
+  </url>
+  <url>
+    <loc>https://atlas.promedia.report/crh/</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://atlas.promedia.report/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlas.promedia.report/en/" />
+    <xhtml:link rel="alternate" hreflang="crh" href="https://atlas.promedia.report/crh/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://atlas.promedia.report/" />
   </url>
   <url>
     <loc>https://atlas.promedia.report/analytics</loc>
     <xhtml:link rel="alternate" hreflang="uk" href="https://atlas.promedia.report/analytics" />
     <xhtml:link rel="alternate" hreflang="en" href="https://atlas.promedia.report/en/analytics" />
+    <xhtml:link rel="alternate" hreflang="crh" href="https://atlas.promedia.report/crh/analytics" />
   </url>
   <url>
     <loc>https://atlas.promedia.report/en/analytics</loc>
     <xhtml:link rel="alternate" hreflang="uk" href="https://atlas.promedia.report/analytics" />
     <xhtml:link rel="alternate" hreflang="en" href="https://atlas.promedia.report/en/analytics" />
+    <xhtml:link rel="alternate" hreflang="crh" href="https://atlas.promedia.report/crh/analytics" />
+  </url>
+  <url>
+    <loc>https://atlas.promedia.report/crh/analytics</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://atlas.promedia.report/analytics" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://atlas.promedia.report/en/analytics" />
+    <xhtml:link rel="alternate" hreflang="crh" href="https://atlas.promedia.report/crh/analytics" />
   </url>
 </urlset>

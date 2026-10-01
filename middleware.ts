@@ -2,9 +2,12 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export function middleware(request: NextRequest) {
   const requestHeaders = new Headers(request.headers);
-  const locale = request.nextUrl.pathname === '/en' || request.nextUrl.pathname.startsWith('/en/')
+  const path = request.nextUrl.pathname;
+  const locale = path === '/en' || path.startsWith('/en/')
     ? 'en'
-    : 'uk';
+    : path === '/crh' || path.startsWith('/crh/')
+      ? 'crh'
+      : 'uk';
   requestHeaders.set('x-promedia-locale', locale);
   return NextResponse.next({ request: { headers: requestHeaders } });
 }

@@ -4,7 +4,7 @@ import { crhAlternate } from '@/lib/i18n';
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: 'https://atlas.promedia.report/en/',
+    canonical: 'https://atlas.promedia.report/crh/',
     languages: {
       uk: 'https://atlas.promedia.report/',
       en: 'https://atlas.promedia.report/en/',
@@ -14,4 +14,4 @@ export const metadata: Metadata = {
   },
 };
 
-export default function EnglishHome(){return <Atlas locale="en"/>}
+export default function CrimeanTatarHome(){return <Atlas locale="crh"/>}
