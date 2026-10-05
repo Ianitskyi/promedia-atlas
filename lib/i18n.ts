@@ -163,16 +163,16 @@ export const CRH: Record<string, string> = {
     'Tesadüfler — daa da teşkermek içün işaretler, umumiy mülkiyetniñ delili degil. Bağlantı malümatı Milliy Şuranıñ açıq reyestrinden tolusınen alındı.',
   'Duplicate contact groups': 'Tekrarlanğan bağlantılar gruppaları',
   'A quick view of where repeated contact details appear most often.': 'Bağlantı malümatı eñ sıq tekrarlanğan yerlerge qısqa baqış.',
-  'duplicate groups': 'tesadüf gruppası',
-  'duplicate groups covering': 'tesadüf gruppası, olar qaplay',
+  'duplicate groups': 'Tekrarlanğan malümat gruppaları',
+  'duplicate groups covering': 'Tekrarlanğan malümat gruppaları, olar qaplay',
   'media identifiers': 'mediya identifikatorını',
   'Found an error or inaccuracy?': 'Hata ya da yañlışlıq taptıñızmı?',
-  'Matching email groups': 'Email tesadüfleri gruppaları',
-  'Matching phone groups': 'Telefon tesadüfleri gruppaları',
-  'Matching address groups': 'Adres tesadüfleri gruppaları',
-  'Matching emails': 'Email tesadüfleri',
-  'Matching phones': 'Telefon tesadüfleri',
-  'Matching addresses': 'Adres tesadüfleri',
+  'Matching email groups': 'Tekrarlanğan email gruppaları',
+  'Matching phone groups': 'Tekrarlanğan telefon gruppaları',
+  'Matching address groups': 'Tekrarlanğan adres gruppaları',
+  'Matching emails': 'Tekrarlanğan email adresleri',
+  'Matching phones': 'Tekrarlanğan telefon nomerleri',
+  'Matching addresses': 'Tekrarlanğan adresler',
 
   // Методологія, панель реєстраційних даних, сторінка бренду
   'Ukraine’s borders include the temporarily occupied territories. No records does not mean no media. Foreign media are available in the directory but are not marked on this map.':
@@ -241,7 +241,7 @@ export const CRH: Record<string, string> = {
     'Asıl menbanı teşkermek ↗',
 
   'Same full name and the same person or company the media outlet is registered to. Letter case, quotes and extra spaces were normalized.':
-    'Ayn tolu ad ve mediya qayd etilgen ayn şahıs ya da şirket. Arif registri, tırnaqlar ve artıq boşluqlar normallaştırıldı.',
+    'Aynı tolu ad ve mediya qayd etilgen aynı şahıs ya da şirket. Arif registri, tırnaqlar ve artıq boşluqlar normallaştırıldı.',
 
   // Розділи аналітики
   'Geography': 'Coğrafiya',
@@ -251,7 +251,7 @@ export const CRH: Record<string, string> = {
   'How many media identifiers are registered to LLCs, sole proprietors, NGOs and other entity types.': 'Qaç mediya MMŞ, ФОП / FOP, İT ve diger subyekt türlerine qayd etilgen.',
   'Person and company portfolios': 'Şahıslar ve şirketlerniñ portfelleri',
   'Entities with the largest numbers of media identifiers.': 'Eñ çoq mediya identifikatorı olğan subyektler.',
-  'Shared contacts': 'Bağlantı tesadüfleri',
+  'Shared contacts': 'Tekrarlanğan bağlantı malümatı',
   'Repeated emails, phones and addresses as review signals.': 'Teşkerüv içün işaret olaraq tekrarlanğan email, telefon ve adresler.',
 
   // Види діяльності
