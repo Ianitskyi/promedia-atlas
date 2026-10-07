@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { crhAlternate } from '@/lib/i18n';
 import { headers } from 'next/headers';
 import Script from 'next/script';
+import { createElement } from 'react';
 import './globals.css';
 import './atlas.css';
 import './profiles.css';
@@ -12,5 +13,5 @@ const analyticsId = 'G-D8TM22QR9R';
 export default async function RootLayout({children}: {children: React.ReactNode}) {
   const header = (await headers()).get('x-promedia-locale');
   const locale = header === 'en' || header === 'crh' ? header : 'uk';
-  return <html lang={locale}><body>{children}<Script src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}`} strategy="afterInteractive"/><Script id="google-analytics" strategy="afterInteractive">{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${analyticsId}');`}</Script><Script src="/js/promedia-memorial-popup.js" strategy="afterInteractive" data-promedia-memorial="true"/></body></html>
+  return <html lang={locale}><body>{createElement('promedia-global-header')}{children}{createElement('promedia-global-footer')}<Script src="https://news.promedia.report/js/promedia-global-shell.js" strategy="afterInteractive"/><Script src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}`} strategy="afterInteractive"/><Script id="google-analytics" strategy="afterInteractive">{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${analyticsId}');`}</Script><Script src="/js/promedia-memorial-popup.js" strategy="afterInteractive" data-promedia-memorial="true"/></body></html>
 }
