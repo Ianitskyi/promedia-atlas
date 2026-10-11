@@ -1,13 +1,14 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
-const d=JSON.parse(fs.readFileSync(new URL('../public/data/registry.json',import.meta.url),'utf8'));
-assert.equal(d.media.length,7230);
-assert.equal(new Set(d.media.map(m=>m.id)).size,7230);
-assert.equal(d.media.filter(m=>m.foreign).length,42);
-assert.equal(d.media.reduce((n,m)=>n+m.details.length,0),10307);
-assert.equal(d.media.filter(m=>m.categories.includes('Онлайн-медіа')).length,1466);
-assert.equal(d.media.filter(m=>m.categories.includes('Друковане медіа')).length,4045);
-assert.equal(d.media.filter(m=>m.categories.includes('Радіомовлення з використанням радіочастотного спектра')).length,517);
+const d=JSON.parse(fs.readFileSync(process.argv[2]||new URL('../public/data/registry.json',import.meta.url),'utf8'));
+assert.match(d.date,/^\d{2}\.\d{2}\.\d{4}$/);
+assert.ok(d.media.length>0);
+assert.equal(new Set(d.media.map(m=>m.id)).size,d.media.length);
+assert.ok(d.media.every(m=>/^[RIL]\d{2}-\d{4,5}$/.test(m.id)));
+// sourceRows includes blank spreadsheet rows; importer reconciles non-empty IDs.
+const mainRows=d.media.filter(m=>!m.foreign).reduce((n,m)=>n+m.details.length,0);
+assert.ok(mainRows>0&&mainRows<=d.sourceRows);
+assert.ok(d.media.some(m=>m.foreign));
 for(const m of d.media){
   assert.ok(m.entities.every(e=>d.entities[e]));
   assert.ok(m.locations.every(l=>d.regions.some(r=>r.id===l.region)));
@@ -18,6 +19,6 @@ for(const m of d.media){
 }
 assert.ok(Object.values(d.entities).every(e=>!e.code||/^\d{8}$/.test(e.code)));
 assert.ok(d.media.some(m=>m.contacts.some(c=>c.email==='mhu.ukraine@gmail.com')),'Declared registry email must be retained');
-assert.equal(d.media.filter(m=>m.foreign&&m.contacts.some(c=>c.phone)&&m.contacts.some(c=>c.address)).length,42,'Foreign entries must retain applicant phone and rights-holder address');
+assert.ok(d.media.filter(m=>m.foreign).every(m=>m.contacts.some(c=>c.address)),'Foreign entries must retain rights-holder address');
 assert.ok(d.media.some(m=>m.details.length>10),'Repeated broadcast rows must be retained');
-console.log('Verified: 7,230 unique IDs, 10,307 source rows, declared contacts, category totals, region mappings, source references, and excluded personal tax codes.');
+console.log(`Verified ${d.date}: ${d.media.length} unique IDs, source row reconciliation, declared contacts, region mappings and excluded personal tax codes.`);

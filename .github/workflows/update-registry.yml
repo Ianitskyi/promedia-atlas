@@ -1,0 +1,49 @@
+name: Update registry monthly
+on:
+  schedule:
+    - cron: '0 7 12 * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: atlas-registry-update
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install openpyxl==3.1.5
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: python scripts/test_registry_history.py
+      - run: python scripts/update_registry.py
+      - name: Check generated changes
+        id: changed
+        run: |
+          if test -n "$(git status --porcelain -- public/data data/registry-sources.json app/brand-index.json)"; then
+            echo "value=true" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.changed.outputs.value == 'true'
+        run: pnpm exec tsc --noEmit && pnpm build
+      - name: Save validated snapshot and deploy
+        if: steps.changed.outputs.value == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/data data/registry-sources.json app/brand-index.json
+          git commit -m 'Update National Council registry with preserved history'
+          git push origin HEAD:main
+          gh workflow run deploy.yml --ref main

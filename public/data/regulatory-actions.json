@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-11",
+  "coverage": "selected-official-reports",
+  "actions": [
+    {
+      "id": "nrada-2026-09-17-man-fine",
+      "date": "2026-09-17",
+      "kind": "fine",
+      "entityName": "ТОВ «ТРК «МАН»",
+      "entityCode": "31658444",
+      "mediaName": "KISS FM",
+      "registryIds": ["L11-00630"],
+      "amountUAH": 73216,
+      "reason": "Несвоєчасне повідомлення про зміни у структурі власності.",
+      "reasonEn": "Late notification of ownership structure changes.",
+      "sourceUrl": "https://webportal.nrada.gov.ua/shtrafy-ta-prypysy-natsionalna-rada-rozglyanula-porushennya-u-sferi-media/",
+      "sourceType": "official-news",
+      "decisionNumber": null,
+      "paymentStatus": "unknown",
+      "appealStatus": "unknown",
+      "matchBasis": "Official report names the registrant and KISS FM; matched to the registry entity and its media identifier."
+    },
+    {
+      "id": "nrada-2026-09-17-radio-vsesvit-fine",
+      "date": "2026-09-17",
+      "kind": "fine",
+      "entityName": "ТОВ «РАДІО ВСЕСВІТ»",
+      "entityCode": "23295475",
+      "mediaName": "KISS FM",
+      "registryIds": ["L11-00550"],
+      "amountUAH": 5491.2,
+      "reason": "Несвоєчасне повідомлення про зміни у структурі власності.",
+      "reasonEn": "Late notification of ownership structure changes.",
+      "sourceUrl": "https://webportal.nrada.gov.ua/shtrafy-ta-prypysy-natsionalna-rada-rozglyanula-porushennya-u-sferi-media/",
+      "sourceType": "official-news",
+      "decisionNumber": null,
+      "paymentStatus": "unknown",
+      "appealStatus": "unknown",
+      "matchBasis": "Official report names the registrant and KISS FM; matched to the registry entity and its media identifier."
+    },
+    {
+      "id": "nrada-2026-09-17-radio-record-fine",
+      "date": "2026-09-17",
+      "kind": "fine",
+      "entityName": "ТОВ «Інформаційне агентство Радіо Рекорд Україна»",
+      "entityCode": null,
+      "mediaName": "Радіо Рекорд",
+      "registryIds": [],
+      "amountUAH": 172940,
+      "reason": "Лінійне радіомовлення в інтернеті без обов’язкової реєстрації.",
+      "reasonEn": "Linear internet radio broadcasting without mandatory registration.",
+      "sourceUrl": "https://webportal.nrada.gov.ua/shtrafy-ta-prypysy-natsionalna-rada-rozglyanula-porushennya-u-sferi-media/",
+      "sourceType": "official-news",
+      "decisionNumber": null,
+      "paymentStatus": "unknown",
+      "appealStatus": "unknown",
+      "matchBasis": "No registry match; the official report describes unregistered broadcasting."
+    }
+  ]
+}

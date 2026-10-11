@@ -1,9 +1,21 @@
 """Read registry as data only. Usage: python scripts/import_registry.py INPUT.xlsx"""
-import sys,json,hashlib,re,xml.etree.ElementTree as ET
+import sys,json,hashlib,re,argparse
+from datetime import datetime
 from pathlib import Path
 import openpyxl
 root=Path(__file__).resolve().parents[1]
-w=openpyxl.load_workbook(sys.argv[1],read_only=True,data_only=True)
+parser=argparse.ArgumentParser()
+parser.add_argument('input')
+parser.add_argument('--date',required=True,help='Snapshot date YYYY-MM-DD')
+parser.add_argument('--output',default='public/data/registry.json')
+args=parser.parse_args()
+snapshot_date=datetime.strptime(args.date,'%Y-%m-%d').strftime('%d.%m.%Y')
+w=openpyxl.load_workbook(args.input,read_only=True,data_only=True)
+assert len(w.worksheets)==2, 'Unexpected workbook sheets'
+assert all(snapshot_date in str(s.cell(1,1).value) for s in w.worksheets), 'Workbook date mismatch'
+assert w.worksheets[0].max_column==16 and w.worksheets[1].max_column==15, 'Unexpected workbook schema'
+assert w.worksheets[0].cell(2,6).value=='Ідентифікатор медіа'
+assert w.worksheets[1].cell(2,8).value=='Ідентифікатор медіа'
 clean=lambda x: re.sub(r'\s+',' ',str(x or '')).strip()
 def emails(value): return list(dict.fromkeys(x.lower() for x in re.findall(r'[\w.+-]+@[\w.-]+\.[A-Za-zА-Яа-яІіЇїЄє]{2,}',clean(value))))
 def add_contact(media,contact):
@@ -39,12 +51,11 @@ for rownum,raw in enumerate(list(w.worksheets[1].values)[2:],3):
     for email in emails(r[2]): add_contact(m,{'role':'Заявник в Україні','name':r[0],'email':email,'phone':r[3],'address':''})
     add_contact(m,{'role':'Правовласник іноземного медіа','name':r[4],'email':'','phone':'','address':r[6]})
     media[mid]=m
-data={'date':'01.08.2026','sourceRows':len(rows),'media':list(media.values()),'entities':entities,'regions':[{'id':s,'name':n} for n,s in zip(names,slugs)]+[{'id':'sevastopol','name':'м. Севастополь'},{'id':'unknown','name':'Не визначено'}]}
+data={'date':snapshot_date,'sourceRows':len(rows),'media':list(media.values()),'entities':entities,'regions':[{'id':s,'name':n} for n,s in zip(names,slugs)]+[{'id':'sevastopol','name':'м. Севастополь'},{'id':'unknown','name':'Не визначено'}]}
 (root/'public/data').mkdir(parents=True,exist_ok=True)
-(root/'public/data/registry.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
-svg=ET.parse(root.parent/'promedia-communities/img/ukraine-oblasts.svg')
-paths=[{'id':p.get('id'),'d':p.get('d')} for p in svg.getroot().iter() if p.tag.endswith('path') and p.get('id')]
-(root/'app/map-paths.json').write_text(json.dumps(paths),encoding='utf-8')
-assert len(media)==7230
-assert sum(len(m['details']) for m in media.values())==10307
-print(json.dumps({'media':len(media),'rows':len(rows),'entities':len(entities),'mapPaths':len(paths),'unknownLocations':sum(l['region']=='unknown' for m in media.values() for l in m['locations'])}))
+assert len(media)>0 and all(re.fullmatch(r'[RIL]\d{2}-\d{4,5}',mid) for mid in media), 'Invalid media IDs'
+assert sum(len(m['details']) for m in media.values())==sum(bool(r[5]) for r in rows)+sum(bool(r[7]) for r in list(w.worksheets[1].values)[2:]), 'Lost source rows'
+output=root/args.output
+output.parent.mkdir(parents=True,exist_ok=True)
+output.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
+print(json.dumps({'date':snapshot_date,'media':len(media),'rows':len(rows),'entities':len(entities)}))

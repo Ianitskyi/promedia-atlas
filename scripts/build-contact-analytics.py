@@ -3,7 +3,9 @@ from collections import defaultdict
 from pathlib import Path
 import openpyxl
 
-source=Path('data/registry-source-2026-08-01.xlsx')
+import sys
+source=Path(sys.argv[1])
+snapshot_date=json.loads(Path('public/data/registry.json').read_text(encoding='utf-8'))['date']
 book=openpyxl.load_workbook(source,read_only=True,data_only=True)
 main,foreign=(book[s] for s in book.sheetnames)
 emails=defaultdict(set); phones=defaultdict(set); addresses=defaultdict(set)
@@ -37,7 +39,7 @@ def groups(values,kind):
     return sorted(rows,key=lambda x:(-x['count'],x['label']))
 
 email_groups=groups(emails,'email'); phone_groups=groups(phones,'phone'); address_groups=groups(addresses,'address')
-out={'date':'01.08.2026','registrationDateAvailable':False,'notes':{
+out={'date':snapshot_date,'registrationDateAvailable':False,'notes':{
 'registrationDate':'У файлі немає окремого поля дати реєстрації, тому часові ряди не розраховуються.',
 'addresses':'Повні адреси є лише на аркуші іноземних лінійних медіа. Для українських записів наведені населений пункт та область, але не вулиця й будинок.',
 'privacy':'Email і телефони маскуються. Збіг контакту є індикатором для перевірки, а не доказом спільної власності.'},

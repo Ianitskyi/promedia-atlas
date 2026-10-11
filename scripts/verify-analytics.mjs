@@ -2,12 +2,13 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 const registry=JSON.parse(fs.readFileSync('public/data/registry.json','utf8'));
 const contacts=JSON.parse(fs.readFileSync('public/data/contact-analytics.json','utf8'));
-assert.equal(registry.media.filter(m=>m.foreign).length,42);
+assert.equal(contacts.date,registry.date);
 assert.equal(contacts.registrationDateAvailable,false);
 for(const key of ['emails','phones','addresses']){
  const set=contacts[key];
  assert.equal(set.duplicateGroups,set.groups.length);
  assert.ok(set.groups.every(g=>g.count===g.mediaIds.length&&g.count>1));
+ assert.ok(set.groups.every(g=>g.mediaIds.every(id=>registry.media.some(m=>m.id===id))));
 }
 assert.ok(contacts.emails.groups.every(g=>!g.label.includes('@')||g.label.includes('***@')));
 assert.ok(contacts.phones.groups.every(g=>g.label.startsWith('••• ')));

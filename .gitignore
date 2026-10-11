@@ -38,3 +38,4 @@ next-env.d.ts
 /work/
 /data/registry-source-*.xlsx
 *.tsbuildinfo
+__pycache__/

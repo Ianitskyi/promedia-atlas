@@ -1,0 +1,16 @@
+{
+  "2026-08-01": {
+    "sourcePage": "https://webportal.nrada.gov.ua/derzhavnyj-reyestr-sub-yektiv-informatsijnoyi-diyalnosti-u-sferi-telebachennya-i-radiomovlennya/",
+    "sourceUrl": null,
+    "capturedAt": "2026-10-11T16:30:05.069635+00:00",
+    "snapshotSha256": "36e6eb857980d40d6c7f0ce63c030e4c596df9d708117c975c367eb9172503ed",
+    "workbookSha256": "985494e82deccf5988ab8e567edfb0a8baf2abc6a8440341e36d75cba965eec0"
+  },
+  "2026-09-01": {
+    "sourcePage": "https://webportal.nrada.gov.ua/derzhavnyj-reyestr-sub-yektiv-informatsijnoyi-diyalnosti-u-sferi-telebachennya-i-radiomovlennya/",
+    "sourceUrl": "https://webportal.nrada.gov.ua/wp-content/uploads/2026/09/dodatok_perelik-subyektiv-u-sferi-media-stanom-na-01.09.2026.xlsx",
+    "capturedAt": "2026-10-11T16:30:05.176777+00:00",
+    "snapshotSha256": "1f42766ce3387ea87620a7327bbe294aefc3e31150206cc947f777c7859b9c6f",
+    "workbookSha256": "31f166cf5a0df4d8e5437335f14d4584eb05614504f8831f050a2d5a99318080"
+  }
+}

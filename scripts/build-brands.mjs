@@ -19,6 +19,10 @@ export function groupMedia(media,overrides){
 }
 export function build(){
  const d=read('public/data/registry.json'),overrides=read('data/brand-overrides.json');
+ const history=read('public/data/history/index.json');
+ const oldProfiles={};
+ const oldBuckets=path.join(root,'public/data/brand-buckets');
+ if(fs.existsSync(oldBuckets))for(const file of fs.readdirSync(oldBuckets).filter(f=>f.endsWith('.json')))Object.assign(oldProfiles,read('public/data/brand-buckets/'+file));
  const communityPath=path.join(root,'data/communities-source.json');
  if(!fs.existsSync(communityPath))fs.copyFileSync(path.join(root,'../promedia-communities/data/communities.json'),communityPath);
  const communities=read('data/communities-source.json').filter(c=>c.status==='approved'&&!c.example);
@@ -43,6 +47,13 @@ export function build(){
   profiles.push(profile);members.forEach(m=>index[m.id]={id,name,nameEn,count:members.length});
   directory.push({id,name,nameEn,city:cities.join('; '),registryIds:ids,newsIds,url:'https://atlas.promedia.report/media/'+id,status:'approved'});
  }
+ for(const p of profiles){
+  const historicIds=oldProfiles[p.id]?.registryIds||[];
+  p.history=Object.fromEntries([...new Set([...p.registryIds,...historicIds])].filter(id=>history.records[id]).map(id=>[id,history.records[id]]));
+ }
+ // Keep old URLs and their last known data when every registration disappears.
+ const liveIds=new Set(profiles.map(p=>p.id));
+ for(const old of Object.values(oldProfiles))if(!liveIds.has(old.id))profiles.push({...old,archived:true,history:Object.fromEntries(old.registryIds.filter(id=>history.records[id]).map(id=>[id,history.records[id]]))});
  const out=path.join(root,'public/data/brand-buckets');fs.mkdirSync(out,{recursive:true});
  // A small stable bucket keeps requests focused without creating thousands of deployment files.
  const buckets={};for(const p of profiles){const key=p.id.slice(6,7);(buckets[key]??={})[p.id]=p}
@@ -50,7 +61,7 @@ export function build(){
  fs.writeFileSync(path.join(root,'public/data/brand-index.json'),JSON.stringify(index));
  fs.writeFileSync(path.join(root,'public/data/media-directory.json'),JSON.stringify(directory));
  fs.writeFileSync(path.join(root,'app/brand-index.json'),JSON.stringify(index));
- fs.writeFileSync(path.join(root,'../promedia-news/public/data/atlas-brands.json'),JSON.stringify(directory));
+ if(process.argv.includes('--sync-news'))fs.writeFileSync(path.join(root,'../promedia-news/public/data/atlas-brands.json'),JSON.stringify(directory));
  console.log(JSON.stringify({brands:profiles.length,buckets:Object.keys(buckets).length,mergedBrands:profiles.filter(p=>p.media.length>1).length,linkedCommunities:profiles.filter(p=>p.community).length,examples:profiles.filter(p=>p.id==='atlas-radio-nv'||p.id==='atlas-ukrainska-pravda'||p.community).map(p=>({id:p.id,name:p.name,count:p.media.length,newsIds:p.newsIds}))}));
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))build();

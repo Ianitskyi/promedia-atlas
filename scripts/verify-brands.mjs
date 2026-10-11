@@ -6,10 +6,11 @@ const groups=groupMedia([fixture('1','Голос','a'),fixture('2','«ГОЛОС
 assert.equal(groups.length,5,'Homonyms, different brands and unnamed registrations must not merge');
 assert.ok(groups.some(g=>g.map(m=>m.id).join(',')==='1,2'));
 const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'));
+const registry=read('public/data/registry.json');
 const index=read('public/data/brand-index.json'),directory=read('public/data/media-directory.json');
-assert.equal(Object.keys(index).length,7230);
-assert.equal(new Set(directory.flatMap(b=>b.registryIds)).size,7230);
-assert.equal(directory.reduce((a,b)=>a+b.registryIds.length,0),7230);
+assert.equal(Object.keys(index).length,registry.media.length);
+assert.equal(new Set(directory.flatMap(b=>b.registryIds)).size,registry.media.length);
+assert.equal(directory.reduce((a,b)=>a+b.registryIds.length,0),registry.media.length);
 assert.equal(index['R40-06743'].id,index['L11-01850'].id);
 assert.equal(index['R11-02145'].id,index['L11-00052'].id);
 assert.equal(index['R40-02280'].id,index['R20-02383'].id);
