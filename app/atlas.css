@@ -43,4 +43,5 @@ h1{letter-spacing:0}
 .history-events article,.regulatory-actions article{padding:1rem 0;border-top:1px solid #e2e5ef;overflow-wrap:anywhere}
 .registry-history details{padding:.8rem 0;border-top:1px solid #e2e5ef}.registry-history summary{cursor:pointer}.registry-history li{margin:.5rem 0}
 .registry-history button{padding:.8rem 1.2rem;border:1px solid #0d0c5c;border-radius:8px;cursor:pointer}
+.regulatory-actions h3 a,.regulatory-actions .action-registry-links a{color:#0d0c5c;font-weight:800;text-decoration:underline;text-decoration-color:#ffac33;text-underline-offset:3px}.regulatory-actions h3 a:hover,.regulatory-actions .action-registry-links a:hover{color:#d56f00}
 @media(max-width:600px){.registry-history,.regulatory-actions{padding:1rem}.history-filters{display:grid}.history-filters label{min-width:0}}
