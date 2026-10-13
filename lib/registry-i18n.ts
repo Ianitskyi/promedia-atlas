@@ -317,7 +317,9 @@ const identity = (s: string) => s;
 // Юридичну форму перекладаємо лише поза лапками: у лапках — власна назва.
 function orgName(s: string, l: 'en' | 'crh') {
   const q = s.search(/["«“]/);
-  return q < 0 ? applyDict(s, C_LEGAL, l, false) : applyDict(s.slice(0, q), C_LEGAL, l, false) + ' ' + translit(s.slice(q), l);
+  if (q < 0) return applyDict(s, C_LEGAL, l, false);
+  const prefix = applyDict(s.slice(0, q), C_LEGAL, l, false);
+  return (prefix ? prefix + ' ' : '') + translit(s.slice(q), l);
 }
 
 export function registryL10n(locale: Locale): RegistryL10n {
