@@ -300,6 +300,11 @@ export const CRH: Record<string, string> = {
   'Foreign companies and representative offices': 'Ecnebiy şirketler ve vekilhaneler',
   'Not identified from the name': 'Ad boyunca belgilenmedi',
   'Names without enough clues to identify a legal form': 'Huquqiy şeklini belgilemek içün yeterli alâmetleri olmağan adlar',
+  // QA: назви та описи розділів аналітики з масиву topics
+  'Saved snapshots, appearances, absences and changed records.': 'Saqlanğan reyestr suretleri, peyda olğan, yoq olğan ve deñişken qaydlar.',
+  'Fines and decisions': 'Para cezaları ve qararlar',
+  'Checked National Council reports with source links.': 'Milliy Şuranıñ qaynaqlarğa bağlantıları bar tekşirilgen haberleri.',
+
   // QA: інтерфейс реєстру, історії знімків, профілів і санкцій
   "REGISTERED MEDIA DATA AS OF": "QAYD ETİLGEN MEDİYALAR — ŞU TARİHKE KÖRE",
   "Loading registry…": "Reyestr yüklene…",
