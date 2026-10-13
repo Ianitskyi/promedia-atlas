@@ -10,7 +10,8 @@
     "build": "vinext build",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
-    "format": "oxfmt"
+    "format": "oxfmt",
+    "check:crh": "node scripts/check-crh-coverage.mjs"
   },
   "dependencies": {
     "react": "19.2.6",
