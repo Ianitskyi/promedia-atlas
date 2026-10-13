@@ -44,7 +44,7 @@ export default function Atlas({locale}:{locale:Locale}){
  const indexed=useMemo(()=>data?.media.map(m=>({m,text:m.names.join(' ')})).map(x=>({m:x.m,text:(x.text+' '+searchLatin(x.text)+(locale==='crh'?' '+translit(x.text,'crh'):'')).toLocaleLowerCase(locale==='crh'?'tr':'uk')}))||[],[data,locale]);
  const filtered=useMemo(()=>indexed.filter(({m,text})=>(!query||text.includes(query))&&(!region||m.locations.some(l=>l.region===region&&(!city||l.city===city)))&&(!city||m.locations.some(l=>l.city===city))&&(!entity||m.entities.includes(entity))).map(x=>x.m),[indexed,query,region,city,entity]);
  const counts=useMemo(()=>{const regions:Record<string,number>={},cats:Record<string,number>={},owners:Record<string,number>={};filtered.forEach(m=>{new Set(m.locations.map(l=>l.region)).forEach(r=>regions[r]=(regions[r]||0)+1);m.categories.forEach(c=>cats[c]=(cats[c]||0)+1);m.entities.forEach(e=>owners[e]=(owners[e]||0)+1)});return {regions,cats,owners}},[filtered]);
- const cities=useMemo(()=>Array.from(new Set(data?.media.flatMap(m=>m.locations.filter(l=>!region||l.region===region).map(l=>l.city)))).sort((a,b)=>a.localeCompare(b,'uk')),[data,region]);
+ const cities=useMemo(()=>Array.from(new Set(data?.media.flatMap(m=>m.locations.filter(l=>!region||l.region===region).map(l=>l.city)))).sort((a,b)=>L.place(a).localeCompare(L.place(b),locale==='crh'?'tr':locale==='en'?'en':'uk')),[data,region,L,locale]);
  const reset=()=>{setSearch('');setRegion('');setCity('');setEntity('')};
  const regionName=(id:string)=>en?(regionEn[id]||id):locale==='crh'?(REGIONS_CRH[id]||data?.regions.find(r=>r.id===id)?.name||id):(data?.regions.find(r=>r.id===id)?.name||id);
  const title=(m:Media)=>m.names.map(L.media).join(' / ')||L.org(data?.entities[m.entities[0]]?.name||'')||m.id;
