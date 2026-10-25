@@ -12,5 +12,12 @@
     "capturedAt": "2026-10-11T16:30:05.176777+00:00",
     "snapshotSha256": "1f42766ce3387ea87620a7327bbe294aefc3e31150206cc947f777c7859b9c6f",
     "workbookSha256": "31f166cf5a0df4d8e5437335f14d4584eb05614504f8831f050a2d5a99318080"
+  },
+  "2026-10-01": {
+    "sourcePage": "https://webportal.nrada.gov.ua/derzhavnyj-reyestr-sub-yektiv-informatsijnoyi-diyalnosti-u-sferi-telebachennya-i-radiomovlennya/",
+    "sourceUrl": "https://webportal.nrada.gov.ua/derzhavnyj-reyestr-sub-yektiv-informatsijnoyi-diyalnosti-u-sferi-telebachennya-i-radiomovlennya/",
+    "capturedAt": "2026-10-25T11:41:20.583846+00:00",
+    "snapshotSha256": "9d1b0fa7102b116fd4d83a9d96c6ccf7a3ccb358babd5173b62419b3451e6b4d",
+    "workbookSha256": "b0cea8854bf0008ed9a23996af3e302eaff80a1aaf6ea7811e024be944db734a"
   }
 }
