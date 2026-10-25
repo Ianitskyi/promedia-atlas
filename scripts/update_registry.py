@@ -85,6 +85,7 @@ def main():
     run(sys.executable, 'scripts/registry_history.py', str(candidate), '--workbook', str(workbook), '--source-url', url)
     run(sys.executable, 'scripts/build-contact-analytics.py', str(workbook))
     run('node', 'scripts/build-brands.mjs')
+    run('node', 'scripts/build-registry-trends.mjs')
     for script in ['verify-data.mjs', 'verify-brands.mjs', 'verify-analytics.mjs', 'verify-history.mjs']:
         run('node', 'scripts/' + script)
 
