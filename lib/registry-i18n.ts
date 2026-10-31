@@ -70,7 +70,7 @@ const OBLASTS: [string, string, string][] = [
   ['Черкаська', 'Cherkasy', 'Çerkası'], ['Чернігівська', 'Chernihiv', 'Çernihiv'], ['Чернівецька', 'Chernivtsi', 'Çernivtsi'],
   ['Дніпропетровська', 'Dnipropetrovsk', 'Dnipropetrovsk'], ['Донецька', 'Donetsk', 'Donetsk'],
   ['Івано-Франківська', 'Ivano-Frankivsk', 'İvano-Frankivsk'], ['Харківська', 'Kharkiv', 'Harkiv'], ['Херсонська', 'Kherson', 'Herson'],
-  ['Хмельницька', 'Khmelnytskyi', 'Hmelnıtskıy'], ['Кіровоградська', 'Kirovohrad', 'Kirovohrad'], ['Київська', 'Kyiv', 'Kiev'],
+  ['Хмельницька', 'Khmelnytskyi', 'Hmelnıtskıy'], ['Кіровоградська', 'Kirovohrad', 'Kirovohrad'], ['Київська', 'Kyiv', 'Kyiv'],
   ['Луганська', 'Luhansk', 'Luhansk'], ['Львівська', 'Lviv', 'Lviv'], ['Миколаївська', 'Mykolaiv', 'Mıkolayiv'], ['Одеська', 'Odesa', 'Odesa'],
   ['Полтавська', 'Poltava', 'Poltava'], ['Рівненська', 'Rivne', 'Rivne'], ['Сумська', 'Sumy', 'Sumı'], ['Тернопільська', 'Ternopil', 'Ternopil'],
   ['Вінницька', 'Vinnytsia', 'Vinnıtsâ'], ['Волинська', 'Volyn', 'Volın'], ['Закарпатська', 'Zakarpattia', 'Zakarpatiye'],
@@ -92,8 +92,8 @@ function oblastPhrases(): Dict {
 // Місто Київ і Крим: власні назви, де офіційна/кримськотатарська форма
 // відрізняється від простої транслітерації.
 const PLACES: Dict = [
-  ['Київ', p('Kyiv', 'Kiev')], ['Києва', p('Kyiv', 'Kiev')], ['Києві', p('Kyiv', 'Kiev')],
-  ['Україна', p('Ukraine', 'Ukraina')], ['України', p('Ukraine', 'Ukraina')], ['Україні', p('Ukraine', 'Ukraina')],
+  ['Київ', p('Kyiv', 'Kyiv')], ['Києва', p('Kyiv', 'Kyiv')], ['Києві', p('Kyiv', 'Kyiv')],
+  ['Україна', p('Ukraine', 'Ukrayina')], ['України', p('Ukraine', 'Ukrayina')], ['Україні', p('Ukraine', 'Ukrayina')],
   ['Автономна Республіка Крим', p('Autonomous Republic of Crimea', 'Qırım Muhtar Cumhuriyeti')],
   ['Автономної Республіки Крим', p('Autonomous Republic of Crimea', 'Qırım Muhtar Cumhuriyeti')],
   ['АР Крим', p('Autonomous Republic of Crimea', 'Qırım Muhtar Cumhuriyeti')], ['Крим', p('Crimea', 'Qırım')], ['Криму', p('Crimea', 'Qırım')],
@@ -226,7 +226,7 @@ const TEXT: Dict = [
   ['поза межами державного кордону', p('outside the state border', 'devlet sıñırından tışta')],
   ['впевненого прийому сигналу супутника', p('reliable satellite signal reception', 'yoldaş sinyalini işançlı qabul etüv')],
   ['розташування багатоканальної телемережі', p('location of the multichannel TV network', 'çoq kanallı tele şebekeniñ yeri')],
-  ['територія України', p('territory of Ukraine', 'Ukraina topraqları')], ['території України', p('territory of Ukraine', 'Ukraina topraqları')],
+  ['територія України', p('territory of Ukraine', 'Ukrayina topraqları')], ['території України', p('territory of Ukraine', 'Ukrayina topraqları')],
   ['територіальних громад', p('territorial communities', 'topraq cemaatleri')], ['територіальної громади', p('territorial community', 'topraq cemaati')],
   ['територіальна громада', p('territorial community', 'topraq cemaati')], ['територіальні громади', p('territorial communities', 'topraq cemaatleri')],
   ['прилеглі території', p('adjacent areas', 'yaqın topraqlar')], ['прилеглі райони', p('adjacent districts', 'yaqın rayonlar')], ['прилеглі', p('adjacent', 'yaqın')],
