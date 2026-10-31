@@ -14,7 +14,7 @@ export const CRH: Record<string, string> = {
   'Map and directory': 'Harita ve katalog',
   'Analytics': 'Analitika',
   'How to register media': 'Mediyanı nasıl qayd ettirmeli',
-  'ProMedia projects': 'ProMedia loyihaları',
+  'ProMedia projects': 'ProMedia leyhaları',
   'News': 'Haberler',
   'Community Map': 'Cemaatlar haritası',
   'Journalism Schools Ranking': 'Jurnalistika fakülteleri reytingi',
@@ -36,7 +36,7 @@ export const CRH: Record<string, string> = {
   'People and companies with the most media identifiers': 'Eñ çoq mediya identifikatorı olğan şahıslar ve şirketler',
   'Explore portfolios →': 'Portfellerni açmaq →',
   'REGISTERED MEDIA DATA AS OF 1 AUGUST 2026': '2026 SENESİ 1 AVGUST VAZİYETİNE KÖRE QAYD ETİLGEN MEDİYALAR MALÜMATI',
-  'Explore Ukraine’s media landscape.': 'Ukrainanıñ mediya manzarasını tedqiq etiñiz.',
+  'Explore Ukraine’s media landscape.': 'Ukrayinanıñ mediya manzarasını tedqiq etiñiz.',
   'National Council registry ↗': 'Milliy Şuranıñ reyestri ↗',
   'Could not load the registry.': 'Reyestrni yüklemek mümkün olmadı.',
   'Try again': 'Bir daa deñemek',
@@ -50,7 +50,7 @@ export const CRH: Record<string, string> = {
   'Name or identifier': 'Ad ya da identifikator',
   'For example, Suspilne': 'Meselâ, Suspilne',
   'Registration region': 'Qayd vilâyeti',
-  'All Ukraine': 'Bütün Ukraina',
+  'All Ukraine': 'Bütün Ukrayina',
   'Locality': 'Yaşayış yeri',
   'All localities': 'Bütün yaşayış yerleri',
   'Activity type': 'Faaliyet türü',
@@ -79,7 +79,7 @@ export const CRH: Record<string, string> = {
   'What the selection shows': 'Saylam neni köstere',
   'Largest portfolios by person or company the media outlets are registered to': 'Mediya qayd etilgen şahıslar ya da şirketlerniñ eñ büyük portfelleri',
   'Regions': 'Vilâyetler',
-  'Media Atlas · A ProMedia project': 'Mediya Atlası · ProMedia loyihası',
+  'Media Atlas · A ProMedia project': 'Mediya Atlası · ProMedia leyhası',
   'Data: 1 Aug 2026 · Guidance checked: 7 Sep 2026': 'Malümat: 01.08.2026 · Qılavuz teşkerildi: 07.09.2026',
   'Report an error': 'Hata aqqında bildirmek',
   'Open brand page · ': 'Brend saifesini açmaq · ',
@@ -88,7 +88,7 @@ export const CRH: Record<string, string> = {
   'Source records': 'Menba qaydları',
   'Check the National Council registry ↗': 'Milliy Şura reyestrinde teşkermek ↗',
   'Not listed in the published registry.': 'İlân etilgen reyestrde kösterilmegen.',
-  'Applicant in Ukraine': 'Ukrainadaki arza berici',
+  'Applicant in Ukraine': 'Ukrayinadaki arza berici',
   'Foreign media rights holder': 'Ecnebiy mediyanıñ aqları saibi',
   'Media entity': 'Mediya subyekti',
   'Foreign media': 'Ecnebiy mediyalar',
@@ -118,7 +118,7 @@ export const CRH: Record<string, string> = {
   'Loading news…': 'Haberler yüklene…',
   'There are no related stories yet.': 'Şimdilik bağlı neşirler yoq.',
   'All ProMedia news ↗': 'Bütün ProMedia haberleri ↗',
-  'A ProMedia project · National Council registry': 'ProMedia loyihası · Milliy Şura reyestri',
+  'A ProMedia project · National Council registry': 'ProMedia leyhası · Milliy Şura reyestri',
   'No contact information is listed in the published registry.': 'İlân etilgen reyestrde bağlantı malümatı kösterilmegen.',
   ' — Media Atlas': ' — Mediya Atlası',
 
@@ -176,7 +176,7 @@ export const CRH: Record<string, string> = {
 
   // Методологія, панель реєстраційних даних, сторінка бренду
   'Ukraine’s borders include the temporarily occupied territories. No records does not mean no media. Foreign media are available in the directory but are not marked on this map.':
-    'Ukrainanıñ sıñırlarına muvaqqat işğal etilgen topraqlar da kire. Qaydlarnıñ olmaması mediyanıñ olmamasını bildirmey. Ecnebiy mediyalar katalogda bar, amma bu haritada işaretlenmey.',
+    'Ukrayinanıñ sıñırlarına muvaqqat işğal etilgen topraqlar da kire. Qaydlarnıñ olmaması mediyanıñ olmamasını bildirmey. Ecnebiy mediyalar katalogda bar, amma bu haritada işaretlenmey.',
   'Totals change with the filters. The number of registrations does not measure audience or influence.':
     'Neticeler süzgüçlernen beraber deñişe. Qaydlar sayısı auditoriyanı ya da tesirni ölçemey.',
   'Several media outlets registered to the same person or company do not always form a media group. This file does not describe ownership or beneficial owners.':
@@ -188,7 +188,7 @@ export const CRH: Record<string, string> = {
   '* People or companies the media outlets are registered to were grouped by code or, where it is missing, by the exact normalized name. This is the atlas’s own calculation and may differ from the official number of entities. For foreign media, the name of the foreign organization is used rather than its representative. A portfolio does not confirm common ownership.':
     '* Mediya qayd etilgen şahıslar ya da şirketler kod boyunca, kod olmasa — anıq normallaştırılğan ad boyunca birleştirildi. Bu atlasnıñ öz esabı, o subyektlerniñ resmiy sayısından farqlı olabilir. Ecnebiy mediyalar içün vekilniñ degil, ecnebiy teşkilâtnıñ adı qullanıldı. Portfel umumiy mülkiyetni tasdiqlamay.',
   'An empty region for the city of Kyiv was normalized as Kyiv City. The map shows regions, not newsroom coordinates or signal coverage. Personal tax numbers of individuals and contact emails are not included in the public dataset. Each card shows the row number in the source sheet for verification.':
-    'Kiev şeeri içün boş vilâyet Kiev şeeri olaraq normallaştırıldı. Harita redaktsiyalarnıñ koordinatlarını ya da sinyal qaplavını degil, vilâyetlerni köstere. Ferdiy şahıslarnıñ vergi nomeraları ve kontakt email-ler açıq malümat toplumına kirsetilmedi. Kartoçkada teşkermek içün menba cedveliniñ satır nomerası kösterile.',
+    'Kyiv şeeri içün boş vilâyet Kyiv şeeri olaraq normallaştırıldı. Harita redaktsiyalarnıñ koordinatlarını ya da sinyal qaplavını degil, vilâyetlerni köstere. Ferdiy şahıslarnıñ vergi nomeraları ve kontakt email-ler açıq malümat toplumına kirsetilmedi. Kartoçkada teşkermek içün menba cedveliniñ satır nomerası kösterile.',
   'Registration does not confirm that a media outlet actually operates or its quality. Online media register voluntarily, so this directory does not cover the whole media market. Category or region shares may overlap when one identifier has several matching records.':
     'Qayd mediyanıñ aqiqiy çalışqanını ya da keyfiyetini tasdiqlamay. Onlayn mediyalar ihtiyariy qayd etile, bu sebepten bu katalog bütün mediya bazarını qaplamay. Bir identifikatornıñ bir qaç uyğun qaydı olsa, kategoriya ya da vilâyet payları üst-üste kelip olur.',
   'Open the source on the National Council website ↗':
@@ -202,7 +202,7 @@ export const CRH: Record<string, string> = {
   'Grouped by name: the code is missing or not used for this sheet.':
     'Ad boyunca birleştirüv: kod yoq ya da bu cedvel içün qullanılmay.',
   'Foreign media — outside the map of Ukraine':
-    'Ecnebiy mediya — Ukraina haritasından tışta',
+    'Ecnebiy mediya — Ukrayina haritasından tışta',
   'Row':
     'Satır',
   'Region':
@@ -218,7 +218,7 @@ export const CRH: Record<string, string> = {
   'Note':
     'Qayd',
   'Map of Ukraine’s regions':
-    'Ukraina vilâyetleriniñ haritası',
+    'Ukrayina vilâyetleriniñ haritası',
   'media':
     'mediya',
   'Foreign media outlet':
@@ -342,7 +342,7 @@ export const CRH: Record<string, string> = {
   "Source: two National Council Excel sheets. Repeated rows are grouped by identifier; original records are retained in the cards. The list also includes providers and service suppliers.": "Qaynaq: Milliy Şuranıñ eki Excel cedveli. Tekrarlanğan satırlar identifikatorğa köre gruplaştırılğan; asıl qaydlar kartalarda saqlanğan. Cedvelge provayderler ve hızmet tedarikçileri de kire.",
   "Snapshot date:": "Reyestr suretiniñ tarihi:",
   "Change history →": "Deñişiklikler tarihı →",
-  "An empty region for the city of Kyiv was normalized as Kyiv City. The map shows regions, not newsroom coordinates or signal coverage. Personal tax numbers are excluded. Declared contacts are reproduced from the source. Each card shows the row number in the source sheet for verification.": "Kiev şeeri içün boş vilâyet meydanı «Kiev şeeri» olaraq standartlaştırıldı. Harita vilâyetlerni köstere, redaksiyalarnıñ koordinatlarını ya da signal qaplavını degil. Şahsiy vergi nomerleri çıqarılğan. Beyan etilgen kontaktlar qaynaqtan alınğan. Tekşirüv içün er kartada qaynaq cedvelindeki satır nomeri kösterile.",
+  "An empty region for the city of Kyiv was normalized as Kyiv City. The map shows regions, not newsroom coordinates or signal coverage. Personal tax numbers are excluded. Declared contacts are reproduced from the source. Each card shows the row number in the source sheet for verification.": "Kyiv şeeri içün boş vilâyet meydanı «Kyiv şeeri» olaraq standartlaştırıldı. Harita vilâyetlerni köstere, redaksiyalarnıñ koordinatlarını ya da signal qaplavını degil. Şahsiy vergi nomerleri çıqarılğan. Beyan etilgen kontaktlar qaynaqtan alınğan. Tekşirüv içün er kartada qaynaq cedvelindeki satır nomeri kösterile.",
   "Data:": "Malümat:",
   "Guidance checked: 7 Sep 2026": "Qullanma 7 sentâbr 2026 senesinde tekşirilgen",
   "The workbook only states that the registry is current as of its snapshot date. A registration date cannot be reliably inferred from the identifier, so the atlas does not fabricate a timeline.": "Excel faylı reyestrniñ yalnız suret alınğan tarihindeki alını köstere. Qayd tarihini identifikatorğa baqıp işançlı şekilde belgilemek mümkün degil; şunıñ içün atlas olmağan tarih sırasını yaratmay.",
@@ -390,7 +390,7 @@ export const CRH: Record<string, string> = {
 export const REGIONS_CRH: Record<string, string> = {
   cherkasy: 'Çerkası', chernihiv: 'Çernihiv', chernivtsi: 'Çernivtsi', crimea: 'Qırım Muhtar Cumhuriyeti',
   dnipropetrovsk: 'Dnipropetrovsk', donetsk: 'Donetsk', 'ivano-frankivsk': 'İvano-Frankivsk', kharkiv: 'Harkiv',
-  kherson: 'Herson', khmelnytskyi: 'Hmelnıtskıy', kirovohrad: 'Kirovohrad', kyiv: 'Kiev vilâyeti', 'kyiv-city': 'Kiev',
+  kherson: 'Herson', khmelnytskyi: 'Hmelnıtskıy', kirovohrad: 'Kirovohrad', kyiv: 'Kyiv vilâyeti', 'kyiv-city': 'Kyiv',
   luhansk: 'Luhansk', lviv: 'Lviv', mykolaiv: 'Mıkolayiv', odessa: 'Odesa', poltava: 'Poltava', rivne: 'Rivne',
   sumy: 'Sumı', ternopil: 'Ternopil', vinnytsia: 'Vinnıtsâ', volyn: 'Volın', zakarpattia: 'Zakarpatiye',
   zaporizhia: 'Zaporijiye', zhytomyr: 'Jıtomır', sevastopol: 'Aqyar (Sevastopol)', unknown: 'Kösterilmegen',
