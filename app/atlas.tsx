@@ -10,7 +10,7 @@ import brandIndexData from './brand-index.json';
 import UtilityNav from './utility-nav';
 import NetworkFooter from './network-footer';
 import {CRH,makeTr,prefix,REGIONS_CRH,type Locale} from '@/lib/i18n';
-import {registryL10n,searchLatin,translit,type RegistryL10n} from '@/lib/registry-i18n';
+import {registryL10n,searchLatin,translit} from '@/lib/registry-i18n';
 const brandIndex = brandIndexData as Record<string,{id:string;name:string;nameEn?:string;count:number}>;
 type Contact={role:string;name:string;email?:string;phone?:string;address?:string};
 type Media={id:string;names:string[];entities:string[];categories:string[];locations:{city:string;region:string}[];technologies:string[];contacts:Contact[];foreign:boolean;details:{row:number;city:string;region:string;channel:string;frequency:string;territory:string;note:string}[]};
