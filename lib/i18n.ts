@@ -46,6 +46,7 @@ export const CRH: Record<string, string> = {
   'people or companies the media outlets are registered to*': 'saylamda mediya qayd etilgen şahıs ya da şirket*',
   'activity categories': 'faaliyet kategoriyası',
   'source rows': 'menbada satır',
+  'Filters': 'Süzgüçler',
   'Find media': 'Mediya tapmaq',
   'Name or identifier': 'Ad ya da identifikator',
   'For example, Suspilne': 'Meselâ, Suspilne',

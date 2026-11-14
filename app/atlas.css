@@ -45,3 +45,33 @@ h1{letter-spacing:0}
 .registry-history button{padding:.8rem 1.2rem;border:1px solid #0d0c5c;border-radius:8px;cursor:pointer}
 .regulatory-actions h3 a,.regulatory-actions .action-registry-links a{color:#0d0c5c;font-weight:800;text-decoration:underline;text-decoration-color:#ffac33;text-underline-offset:3px}.regulatory-actions h3 a:hover,.regulatory-actions .action-registry-links a:hover{color:#d56f00}
 @media(max-width:600px){.registry-history,.regulatory-actions{padding:1rem}.history-filters{display:grid}.history-filters label{min-width:0}}
+
+/* Keep the map near the top; secondary controls expand on demand. */
+.atlas-hero{padding-top:22px}
+.workspace{padding-top:14px}
+.stats{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:14px}
+.stats>a{padding:12px 18px;min-width:0}
+.stats strong{font-size:28px;line-height:1.25;margin-bottom:4px}
+.stats span{display:block;font-size:13px;line-height:1.4}
+.main-grid{display:block}
+.filters{position:static;display:block;padding:0;margin-bottom:14px}
+.filters>summary{display:flex;align-items:center;gap:8px;min-height:44px;padding:10px 16px;list-style:none;cursor:pointer;color:#0d0c5c;font-size:14px;font-weight:700}
+.filters>summary::-webkit-details-marker{display:none}
+.filters>summary::after{content:'⌄';margin-left:auto}
+.filters[open]>summary::after{content:'⌃'}
+.filters>summary:focus-visible{outline:3px solid #e99b28;outline-offset:3px;border-radius:10px}
+.filter-count{background:#fff2dd;border-radius:999px;padding:0 7px;font-size:12px}
+.filter-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:0 16px 16px}
+.filter-fields label{margin:0;min-width:0}
+.filter-fields>button{width:fit-content;min-height:42px}
+.filter-fields .entity-filter,.filter-fields .help{grid-column:1/-1;margin:0}
+.atlas-project-footer .source-link{margin-top:0}
+@media(max-width:700px){
+  .atlas-hero{padding-top:18px}
+  .atlas-hero .eyebrow{font-size:10px;letter-spacing:1px;margin-bottom:8px}
+  .atlas-hero>p:last-child{font-size:14px;margin-top:8px}
+  .stats>a{padding:12px}
+  .stats strong{font-size:26px}
+  .stats span{font-size:12px}
+  .filter-fields{grid-template-columns:1fr}
+}
