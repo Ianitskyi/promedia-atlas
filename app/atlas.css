@@ -75,3 +75,9 @@ h1{letter-spacing:0}
   .stats span{font-size:12px}
   .filter-fields{grid-template-columns:1fr}
 }
+
+.home-analytics__card{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;border-top-width:1px;padding:14px 16px}
+.home-analytics__card:nth-child(2),.home-analytics__card:nth-child(3){border-top-color:#e7e7ef}
+.home-analytics__card h3{font-size:15px}
+.home-analytics__card>span{color:#0d0c5c}
+.catalog-expand{padding:18px 24px}
