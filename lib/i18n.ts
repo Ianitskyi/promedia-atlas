@@ -47,6 +47,8 @@ export const CRH: Record<string, string> = {
   'activity categories': 'faaliyet kategoriyası',
   'source rows': 'menbada satır',
   'Filters': 'Süzgüçler',
+  'Media identifier counts by the registrant’s legal form.': 'Reyestrantnıñ uquqiy şekline köre mediya identifikatorlarınıñ sayısı.',
+  'media ID change': 'mediya ID deñişmesi',
   'Full directory': 'Tam katalog',
   'Registered Ukrainian media data as of': 'Qayd etilgen ukrain mediyaları aqqında şu tarihke köre malümat:',
   'Find media': 'Mediya tapmaq',
@@ -150,8 +152,8 @@ export const CRH: Record<string, string> = {
     'Mediyalarnıñ bir şahıs ya da şirketke qayd etilmesi özü umumiy redaktsiya nezaretini ya da mülkiyetni isbatlamay. Oña qayd etilgen mediyalarnı körmek içün adğa basıñız.',
   'Largest registrant portfolios': 'Reyestrantlarnıñ eñ büyük portfelleri',
   'The chart shows the entities with the most media identifiers in the registry.': 'Grafik reyestrde eñ çoq mediya identifikatorı olğan subyektlerni köstere.',
-  'This grouping is calculated automatically from the registered person or company name in the public registry. The donut chart counts each media identifier once, by the first listed entity. The breakdown below is an analytical aid, not an official legal classification.':
-    'Bu gruppalaştırma açıq reyestrdeki şahıs ya da şirket adı boyunca avtomatik esaplandı. Dairesel diagramma er mediya identifikatorını bir kere, birinci kösterilgen subyekt boyunca saya. Bu resmiy huquqiy tasnif degil, analitik yardımdır.',
+  'This grouping is calculated automatically from the registered person or company name in the public registry. Each media identifier is counted once, by the first listed entity. The breakdown below is an analytical aid, not an official legal classification.':
+    'Bu gruppalaştırma açıq reyestrdeki şahıs ya da şirket adı boyunca avtomatik esaplandı. Er mediya identifikatorı bir kere, birinci kösterilgen subyekt boyunca esapqa alına. Bu resmiy huquqiy tasnif degil, analitik yardımdır.',
   'Media identifiers by legal form': 'Huquqiy şekiller boyunca mediya identifikatorları',
   'A share view of the main legal forms behind registered media identifiers.': 'Mediya identifikatorları qayd etilgen esas huquqiy şekillerniñ payları.',
   'Legal forms compared': 'Huquqiy şekillerniñ qıyaslaması',

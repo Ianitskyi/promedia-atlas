@@ -81,3 +81,33 @@ h1{letter-spacing:0}
 .home-analytics__card h3{font-size:15px}
 .home-analytics__card>span{color:#0d0c5c}
 .catalog-expand{padding:18px 24px}
+
+/* Dot charts: one shared scale, full labels, and exact values. */
+.dot-panel{margin:28px 0;padding:24px;background:#fff;border:1px solid #e7e7ef;border-radius:16px;color:#15142f}
+.dot-panel-head h2{font-size:21px;line-height:1.35;color:#0d0c5c}
+.dot-panel-head p{margin-top:8px;color:#686b80;font-size:13px;line-height:1.6;max-width:760px}
+.dot-panel-unit{margin:18px 0 4px;color:#73778a;font-size:12px}
+.dot-plot-list{list-style:none;padding:0;margin:0}
+.dot-plot-row,.dot-plot-axis{display:grid;grid-template-columns:minmax(150px,2fr) minmax(0,3fr) minmax(52px,max-content);gap:20px;align-items:center}
+.dot-plot-row{padding:13px 0;min-height:58px}
+.dot-plot-label{font-size:14px;line-height:1.5;overflow-wrap:anywhere;min-width:0}
+.dot-plot-label small{display:block;color:#73778a;font-size:12px;margin-top:4px;line-height:1.5}
+.dot-plot-track{position:relative;display:block;height:2px;background:#e2e3ed;margin-inline:7px}
+.dot-plot-mark{position:absolute;display:block;top:50%;width:12px;height:12px;border-radius:50%;transform:translate(-50%,-50%);background:#5655a1}
+.dot-plot-zero{position:absolute;top:50%;height:18px;width:1px;background:#bfc0d1;transform:translateY(-50%)}
+.dot-plot-value{font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap;color:#0d0c5c}
+.dot-plot-axis{margin-top:8px;color:#73778a;font-size:11px;font-variant-numeric:tabular-nums}
+.dot-plot-axis>div{display:flex;justify-content:space-between;margin-inline:7px;gap:4px}
+.dot-plot-axis>div>span:first-child{transform:translateX(-50%)}
+.dot-plot-axis>div>span:last-child{transform:translateX(50%)}
+@media(max-width:600px){
+ .dot-panel{padding:20px 16px;margin:22px 0}
+ .dot-panel-head h2{font-size:19px}
+ .dot-plot-row,.dot-plot-axis{grid-template-columns:minmax(0,1fr) minmax(52px,max-content);gap:10px 18px}
+ .dot-plot-row{padding:14px 0}
+ .dot-plot-label{grid-column:1/-1;font-size:14px}
+ .dot-plot-track{grid-column:1;grid-row:2}
+ .dot-plot-value{grid-column:2;grid-row:2}
+ .dot-plot-axis>span:first-child{display:none}
+ .dot-plot-axis>div{grid-column:1}
+}
