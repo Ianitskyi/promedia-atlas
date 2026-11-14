@@ -130,7 +130,7 @@ export const CRH: Record<string, string> = {
   // Аналітика
   'ANALYTICAL CONTENTS': 'ANALİTİKANIÑ MÜNDERİCESİ',
   'Explore the registry': 'Reyestrni tedqiq etiñiz',
-  'Open one analytical aspect at a time. Each page explains the limits of the source data.': 'Analitikanıñ bir cihetini açıñız. Er saifede menbanıñ sıñırları añlatıla.',
+  'Open one analytical aspect at a time.': 'Analitikanıñ bir cihetini açıñız.',
   '← Analytical contents': '← Analitikanıñ mündericesi',
   'MEDIA REGISTRY ANALYTICS': 'MEDİYA REYESTRİNİÑ ANALİTİKASI',
   'Loading data…': 'Malümat yüklene…',
@@ -307,6 +307,7 @@ export const CRH: Record<string, string> = {
   'Names without enough clues to identify a legal form': 'Huquqiy şeklini belgilemek içün yeterli alâmetleri olmağan adlar',
   // QA: назви та описи розділів аналітики з масиву topics
   'A trend summary since observations began, plus the saved snapshots: appearances, absences and changed records.': 'Közetüv başlağanından berli tendensiyalar hulâsası, hem saqlanğan reyestr suretleri: peyda olğan, yoq olğan ve deñişken qaydlar.',
+  'Fines': 'Para cezaları',
   'Fines and decisions': 'Para cezaları ve qararlar',
   'Checked National Council reports with source links.': 'Milliy Şuranıñ qaynaqlarğa bağlantıları bar tekşirilgen haberleri.',
   // QA: тенденції реєстру (сторінка "Історія")
