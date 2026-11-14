@@ -50,7 +50,7 @@ export default function Atlas({locale}:{locale:Locale}){
  const title=(m:Media)=>m.names.map(L.media).join(' / ')||L.org(data?.entities[m.entities[0]]?.name||'')||m.id;
  const max=Math.max(1,...Object.values(counts.regions));
  return <><UtilityNav locale={locale} view={view} onView={setView}/>
- <section className="atlas-hero"><p className="eyebrow">{tr('ДАНІ ПРО ЗАРЕЄСТРОВАНІ МЕДІА СТАНОМ НА','REGISTERED MEDIA DATA AS OF')} {data?.date||'…'}</p><h1>{tr('Атлас Медіа','Media Atlas')}</h1><p>{tr('Досліджуйте український медійний ландшафт.','Explore Ukraine’s media landscape.')}</p></section>
+ <section className="atlas-hero"><h1>{tr('Атлас Медіа','Media Atlas')}</h1><p>{tr('Дані про зареєстровані українські медіа станом на','Registered Ukrainian media data as of')} {data?.date||'…'}</p></section>
  {view==='guide'?<Guide locale={locale}/>:<main className="workspace">
  {!data?<div className="loading" role="status">{error?<>{tr('Не вдалося завантажити реєстр.','Could not load the registry.')} <Button onClick={()=>location.reload()}>{tr('Спробувати ще раз','Try again')}</Button></>:tr('Завантажуємо реєстр…','Loading registry…')}</div>:<>
  <div className="stats" aria-label={tr('Інтерактивна статистика реєстру','Interactive registry statistics')}><a href="#catalog"><strong>{fmt(filtered.length)}</strong><span>{tr('унікальних ідентифікаторів','unique identifiers')}</span></a><a href={prefix(locale)+'/analytics/registrants'}><strong>{fmt(Object.keys(counts.owners).length)}</strong><span>{tr('фізичних або юридичних осіб, на яких оформлені медіа*','people or companies the media outlets are registered to*')}</span></a></div>

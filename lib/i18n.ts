@@ -47,6 +47,7 @@ export const CRH: Record<string, string> = {
   'activity categories': 'faaliyet kategoriyası',
   'source rows': 'menbada satır',
   'Filters': 'Süzgüçler',
+  'Registered Ukrainian media data as of': 'Qayd etilgen ukrain mediyaları aqqında şu tarihke köre malümat:',
   'Find media': 'Mediya tapmaq',
   'Name or identifier': 'Ad ya da identifikator',
   'For example, Suspilne': 'Meselâ, Suspilne',
